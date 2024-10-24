@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+<div class="container">
+    <h1>page test</h1>
+    {% for article in articles %}
+        <p class="text-danger">{{ article.title }}</p>
+        <p>{{ article.content }}</p>
+
+    {% endfor %}
+</div>
+
+</body>
+</html>
