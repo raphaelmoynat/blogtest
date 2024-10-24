@@ -21,6 +21,9 @@ from website import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', views.index, name='home'),
+    path('home/', views.index_articles, name='home'),
     path('add/', views.article_form_view, name='article'),
+    path('article/<int:article_id>/', views.show_article, name='show_article'),
+    path('article/<int:article_id>/delete/', views.delete_article, name='delete_article'),
+    path('article/<int:article_id>/edit/', views.update_article, name='update_article'),
 ]

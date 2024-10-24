@@ -2,20 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Article Page</title>
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
 </head>
-<body>
-<div class="container">
-    <h1>page test</h1>
-    {% for article in articles %}
-        <p class="text-danger">{{ article.title }}</p>
-        <p>{{ article.content }}</p>
 
-    {% endfor %}
-</div>
+{% include "website/navbar.html" %}
+
+<body>
+{% block body %}{% endblock %}
 
 </body>
 </html>
