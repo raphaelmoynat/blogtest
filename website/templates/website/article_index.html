@@ -14,8 +14,13 @@
                                 <h5 class="card-title text-primary">{{ article.title }}</h5>
                                 <p class="card-text">{{ article.content|truncatewords:20 }}</p>
                                 <a href="{% url 'show_article' article.id %}" class="btn btn-primary btn-sm">Voir</a>                            </div>
-                            <div class="card-footer text-muted">
-                                Publié le: {{ article.created_at|date:"F j, Y" }}
+                            <div class="card-footer text-muted d-flex justify-content-between">
+                                    <div>
+                                        auteur : {{ article.author.username }}
+                                    </div>
+                                    <div>
+                                        {{ article.created_at }}
+                                    </div>
                             </div>
                         </div>
                     </div>

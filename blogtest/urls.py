@@ -24,6 +24,11 @@ urlpatterns = [
     path('home/', views.index_articles, name='home'),
     path('add/', views.article_form_view, name='article'),
     path('article/<int:article_id>/', views.show_article, name='show_article'),
-    path('article/<int:article_id>/delete/', views.delete_article, name='delete_article'),
-    path('article/<int:article_id>/edit/', views.update_article, name='update_article'),
+    path('article/delete/<int:article_id>/', views.delete_article, name='delete_article'),
+    path('article/edit/<int:article_id>/', views.update_article, name='update_article'),
+    path('comment/delete/<int:comment_id>/', views.delete_comment, name='delete_comment'),
+    path('comment/edit<int:comment_id>/', views.update_comment, name='update_comment'),
+    path('register/', views.user_register, name='register'),
+    path('login/', views.user_login, name='login'),
+    path('logout/', views.user_logout, name='logout'),
 ]
